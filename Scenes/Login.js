@@ -17,8 +17,8 @@ export default class Login extends React.Component {
               </View>
               <LoginForm/>
               <View style={styles.accountLogin}>
-                    <TouchableOpacity>
-                        <Text style={{opacity: 0.9,color:'#34B3E4'}}>Forgot your password? </Text>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Forgot')}>
+                        <Text style={{opacity: 0.9,color:'#34B3E4'}} >Forgot your password? </Text>
                     </TouchableOpacity>
                 </View>  
             </KeyboardAvoidingView>

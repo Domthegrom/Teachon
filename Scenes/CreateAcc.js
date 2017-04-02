@@ -4,7 +4,7 @@ import { StyleSheet, TextInput, Dimensions, Platform, Text, View, StatusBar, Tou
 import Icon from 'react-native-vector-icons/Entypo';
 import {StackNavigator, TabNavigator, TabView,} from 'react-navigation';
 import CreateAccForm from '../Forms/CreateAccForm';
-import StackNavigation from '../Navigation/StackNavigation';
+import Router from '../Navigation/Router';
 
 
 export default class CreateAcc extends React.Component {
@@ -13,7 +13,7 @@ export default class CreateAcc extends React.Component {
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
               <CreateAccForm/>
               <View style={styles.accountLogin}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('Forgot')}>
                         <Text style={{opacity: 0.9,color:'#34B3E4'}}>Forgot your password? </Text>
                     </TouchableOpacity>
                 </View>  

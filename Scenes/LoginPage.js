@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import { Constants, Facebook, Google } from 'expo';
 
 export default class LoginPage extends React.Component {
+
+  
     _handleFacebookLogin = async () => {
     try {
       const { type, token } = await Facebook.logInWithReadPermissionsAsync(
@@ -100,9 +102,6 @@ export default class LoginPage extends React.Component {
                 <View style={styles.loginIcons}>
                     <View style={{marginHorizontal: 28}}>
                     <Icon onPress={this._handleFacebookLogin} name="facebook-with-circle" size={65} color='#3B5998' />
-                    </View>
-                    <View style={{marginHorizontal: 28}}> 
-                    <Icon onPress={() => Alert.alert('Linkedin Bitch')} name="linkedin-with-circle" size={65} color='#0077B5' />
                     </View>
                     <View style={{marginHorizontal: 28}}>     
                     <Icon onPress={this._handleGoogleLogin}  name="google--with-circle" size={65} color='#DC4E41' />
