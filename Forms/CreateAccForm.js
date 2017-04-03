@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyleSheet, TextInput, Dimensions, Platform, Text, View, StatusBar, TouchableOpacity, KeyboardAvoidingView, } from 'react-native';
 
-
 export default class CreateAcc extends React.Component {
     render() {
         return (
@@ -14,7 +13,6 @@ export default class CreateAcc extends React.Component {
                  returnKeyType="next"
                  onSubmitEditing={() => this.FirstName.focus()}
                  keyboardType="email-address"
-                 autoCapitalize="none"
                  autoCorrect={false} 
                 />
                  <TextInput
@@ -25,7 +23,6 @@ export default class CreateAcc extends React.Component {
                  keyboardType="email-address"
                  onSubmitEditing={() => this.LastName.focus()}
                  ref={(input) => this.FirstName = input}
-                 autoCapitalize="none"
                  autoCorrect={false} 
                 />
                 <TextInput
@@ -47,7 +44,7 @@ export default class CreateAcc extends React.Component {
                  returnKeyType='go'
                  ref={(input) => this.passwordInput = input}
                 />
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Feed')} style={styles.buttonContainer}>
                     <Text style={styles.buttonText}>
                         LOGIN
                     </Text>

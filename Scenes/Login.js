@@ -12,7 +12,7 @@ export default class Login extends React.Component {
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
 
               <View style={styles.logo}>
-                <Text style={{fontSize: 64, color: '#34B3E4'}}>Teach<Text style={{fontSize: 64, color: '#0077B5'}}>On</Text></Text>
+                <Text style={{fontSize: 64, color: '#34B3E4'}}>Partner<Text style={{fontSize: 64, color: '#0077B5'}}>Up</Text></Text>
                 <Text style={{fontSize: 13, opacity: 0.8, color: '#0077B5'}}>We connect you. You work easier.</Text>
               </View>
               <LoginForm/>

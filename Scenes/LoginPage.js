@@ -91,7 +91,7 @@ export default class LoginPage extends React.Component {
             <View style={styles.container}>
 
               <View style={styles.logo}>
-                <Text style={{fontSize: 64, color: '#34B3E4'}}>Teach<Text style={{fontSize: 64, color: '#0077B5'}}>On</Text></Text>
+                <Text style={{fontSize: 64, color: '#34B3E4'}}>Partner<Text style={{fontSize: 64, color: '#0077B5'}}>Up</Text></Text>
                 <Text style={{fontSize: 13, opacity: 0.8, color: '#0077B5'}}>We connect you. You work easier.</Text>
               </View>
 
@@ -103,6 +103,9 @@ export default class LoginPage extends React.Component {
                     <View style={{marginHorizontal: 28}}>
                     <Icon onPress={this._handleFacebookLogin} name="facebook-with-circle" size={65} color='#3B5998' />
                     </View>
+                    <View style={{marginHorizontal: 28}}>     
+                    <Icon onPress={() => this.props.navigation.navigate('Feed')}  name="linkedin-with-circle" size={65} color='#0077B5' />
+                    </View> 
                     <View style={{marginHorizontal: 28}}>     
                     <Icon onPress={this._handleGoogleLogin}  name="google--with-circle" size={65} color='#DC4E41' />
                     </View>    
