@@ -6,8 +6,10 @@ import React, { Component } from 'react';
 import { Constants, Facebook, Google } from 'expo';
 
 export default class LoginPage extends React.Component {
+static navigationOptions = {
+    header: { visible:false }
+  };
 
-  
     _handleFacebookLogin = async () => {
     try {
       const { type, token } = await Facebook.logInWithReadPermissionsAsync(
@@ -136,6 +138,7 @@ export default class LoginPage extends React.Component {
         );
     }
 }
+
 
 
 

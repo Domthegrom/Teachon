@@ -11,6 +11,9 @@ import Feed from '../Scenes/Feed';
  export default StackNavigator({
   LoginPage: { 
     screen: LoginPage,
+    navigationOptions: {
+      header: { visible:false },
+    },
    },
   Create: { 
     screen: CreateAcc,
@@ -36,5 +39,9 @@ import Feed from '../Scenes/Feed';
        title: 'Feed'
      }
    },
+  },
+  { 
+    headerMode: 'screen' 
+  
   });
 
