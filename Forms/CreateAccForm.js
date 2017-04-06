@@ -44,11 +44,7 @@ export default class CreateAcc extends React.Component {
                  returnKeyType='go'
                  ref={(input) => this.passwordInput = input}
                 />
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Feed')} style={styles.buttonContainer}>
-                    <Text style={styles.buttonText}>
-                        LOGIN
-                    </Text>
-                </TouchableOpacity>   
+ 
             </View>   
         );
     }

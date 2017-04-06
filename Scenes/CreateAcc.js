@@ -12,6 +12,11 @@ export default class CreateAcc extends React.Component {
         return(
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
               <CreateAccForm/>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('Feed')} style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>
+                        LOGIN
+                    </Text>
+                </TouchableOpacity>  
               <View style={styles.accountLogin}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('Forgot')}>
                         <Text style={{opacity: 0.9,color:'#34B3E4'}}>Forgot your password? </Text>
@@ -37,6 +42,16 @@ const styles = StyleSheet.create ({
     },
     accountLogin: {
         alignSelf: 'center',
-        marginBottom: 10
+        marginBottom: 10,
+        marginTop: 10
     },
+    buttonContainer: {
+       backgroundColor: '#34B3E4',
+       paddingVertical: 12,
+   },
+   buttonText: {
+       color: 'white',
+       textAlign: 'center',
+       fontWeight: '700',
+   },
 })

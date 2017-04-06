@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, TextInput, Dimensions, Platform, Text, View, StatusBar, TouchableOpacity, KeyboardAvoidingView, } from 'react-native';
+import {StackNavigator, TabNavigator, TabView,} from 'react-navigation';
 
 
 export default class LoginForm extends React.Component {
@@ -23,12 +24,7 @@ export default class LoginForm extends React.Component {
                  secureTextEntry
                  returnKeyType='go'
                  ref={(input) => this.passwordInput = input}
-                />
-                <TouchableOpacity style={styles.buttonContainer}>
-                    <Text style={styles.buttonText}>
-                        LOGIN
-                    </Text>
-                </TouchableOpacity>   
+                />  
             </View>   
         );
     }
