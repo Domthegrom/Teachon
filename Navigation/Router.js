@@ -6,7 +6,8 @@ import Login from '../Scenes/Login';
 import LoginPage from '../Scenes/LoginPage';
 import ForgotPass from '../Scenes/ForgotPass';
 import Feed from '../Scenes/Feed';
-
+import Settings from '../Scenes/Settings';
+import Profile from '../Scenes/Profile';
 
  export default StackNavigator({
   LoginPage: { 
@@ -18,26 +19,54 @@ import Feed from '../Scenes/Feed';
   Create: { 
     screen: CreateAcc,
      navigationOptions: {
-       title: 'Create Account',
+       title: 'Mentor',
+       header:{
+       titleStyle: { color: '#0077B5' }
+       }
      }
+   },
+   Profile: {
+     screen: Profile,
+      title: 'Profile',
+      header:{
+       titleStyle: { color: '#0077B5' },
+       },
    },
   Log:  { 
     screen: Login,
     navigationOptions: {
-       title: 'Log in',
+       title: 'Mentor',
+       header:{
+       titleStyle: { color: '#0077B5' }
+       }
      }
   },
   Forgot: {
      screen: ForgotPass,
      navigationOptions: {
-       title: 'Account Recovery',
+       title: 'Mentor',
+       header:{
+       titleStyle: { color: '#0077B5' }
+       }
      }
    },
    Feed: {
      screen: Feed,
      navigationOptions: {
-       title: 'Feed'
+       title: 'Mentor',
+       header:{
+       titleStyle: { color: '#0077B5' }
+       } 
      }
+   },
+   Settings: {
+     screen: Settings,
+      navigationOptions: {
+        title: 'Mentor',
+        header:{
+       titleStyle: { color: '#0077B5' }
+       }
+      }
    },
   },
   { 
