@@ -8,18 +8,19 @@ import Router from '../Navigation/Router';
 
 
 export default class CreateAcc extends React.Component {
+    constructor() {
+        super(); 
+            this.state = {
+                passB: 'Forgot your Password?'
+            }
+    }
     render() {
         return(
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
-              <CreateAccForm/>
-              <TouchableOpacity onPress={() => this.props.navigation.navigate('Feed')} style={styles.buttonContainer}>
-                    <Text style={styles.buttonText}>
-                        LOGIN
-                    </Text>
-                </TouchableOpacity>  
+              <CreateAccForm navigation={this.props.navigation} /> 
               <View style={styles.accountLogin}>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('Forgot')}>
-                        <Text style={{opacity: 0.9,color:'#34B3E4'}}>Forgot your password? </Text>
+                        <Text style={{opacity: 0.9,color:'#34B3E4'}}>{this.state.passB} </Text>
                     </TouchableOpacity>
                 </View>  
             </KeyboardAvoidingView>
@@ -45,13 +46,4 @@ const styles = StyleSheet.create ({
         marginBottom: 10,
         marginTop: 10
     },
-    buttonContainer: {
-       backgroundColor: '#34B3E4',
-       paddingVertical: 12,
-   },
-   buttonText: {
-       color: 'white',
-       textAlign: 'center',
-       fontWeight: '700',
-   },
 })

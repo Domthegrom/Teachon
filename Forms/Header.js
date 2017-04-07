@@ -5,6 +5,13 @@ import Icon from 'react-native-vector-icons/Entypo';
 
 
 export default class Profile extends React.Component {
+    constructor() {
+        super(); 
+            this.state = {
+                name: 'John Doe',
+                title: '-APP Developer-'
+            }
+    }
     render() {
         return (
             <Image stlye={styles.headerBackground} source={require('../img/background.jpeg')}>
@@ -12,8 +19,14 @@ export default class Profile extends React.Component {
                      <View style={styles.profilepicWrap}>
                          <Image style={styles.profilePic} source={require('../img/dom.png')}/>
                      </View>
-                     <Text style={styles.name}>Dominic Gozza</Text>
-                     <Text style={styles.pos}>- APP Developer-</Text>
+                        <Text 
+                        onPress={() => this.props.navigation.navigate('Name')} 
+                        style={styles.name}>
+                            {this.state.name}
+                        </Text>
+                     <Text 
+                     onPress={() => this.props.navigation.navigate('Name')}
+                     style={styles.pos}>{this.state.title}</Text>
                 </View>
             </Image>
         );

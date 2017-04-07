@@ -6,11 +6,17 @@ import {StackNavigator, TabNavigator, TabView,} from 'react-navigation';
 import ForgotPassForm from '../Forms/ForgotPassForm';
 
 export default class Login extends React.Component {
+    constructor() {
+        super(); 
+            this.state = {
+                reset: 'Enter your email and we’ll send you the link to reset your password.'
+            }
+    }
     render() {
         return(
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
                 <Text style={{textAlign: 'center',}}>
-                    Enter your email and we’ll send you the link to reset your password.
+                    {this.state.reset}
                 </Text>
               <ForgotPassForm/>
             </KeyboardAvoidingView>

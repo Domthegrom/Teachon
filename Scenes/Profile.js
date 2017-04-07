@@ -3,8 +3,7 @@ import React from 'react';
 import { StyleSheet, TextInput, Dimensions, Platform, Text, View, StatusBar, TouchableOpacity, AppRegistry, KeyboardAvoidingView} from 'react-native';
 import Icon from 'react-native-vector-icons/Entypo';
 import Header from '../Forms/Header';
-import ProfileForms from '../Forms/ProfileForms'
-import Test from '../Forms/Test'
+import Bio from '../Forms/Bio'
 
 
 
@@ -13,7 +12,7 @@ export default class Profile extends React.Component {
         return (
             <View style={styles.container}>
                 <Header />
-                <Test />
+                <Bio  />
             </View>
         );
     }

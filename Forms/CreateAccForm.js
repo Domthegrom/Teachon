@@ -2,13 +2,22 @@ import React from 'react';
 import { StyleSheet, TextInput, Dimensions, Platform, Text, View, StatusBar, TouchableOpacity, KeyboardAvoidingView, } from 'react-native';
 
 export default class CreateAcc extends React.Component {
+    constructor() {
+        super ();
+            this.state= {
+                name: 'First Name',
+                name2: 'Last Name',
+                email: 'Email',
+                pass: 'Password',
+            }
+    }
     render() {
         return (
             <View style={styles.container}>
                 
                 <TextInput
                  style={styles.input}
-                 placeholder='First Name'
+                 placeholder= {this.state.name}
                  placeholderTextColor='rgba(255,255,255,0.9)'
                  returnKeyType="next"
                  onSubmitEditing={() => this.FirstName.focus()}
@@ -17,7 +26,7 @@ export default class CreateAcc extends React.Component {
                 />
                  <TextInput
                  style={styles.input}
-                 placeholder='Last Name'
+                 placeholder={this.state.name2}
                  placeholderTextColor='rgba(255,255,255,0.9)'
                  returnKeyType="next"
                  keyboardType="email-address"
@@ -27,7 +36,7 @@ export default class CreateAcc extends React.Component {
                 />
                 <TextInput
                  style={styles.input}
-                 placeholder='Email'
+                 placeholder={this.state.email}
                  placeholderTextColor='rgba(255,255,255,0.9)'
                  returnKeyType="next"
                  onSubmitEditing={() => this.passwordInput.focus()}
@@ -38,13 +47,17 @@ export default class CreateAcc extends React.Component {
                 />
                 <TextInput
                  style={styles.input}
-                 placeholder='Password'
+                 placeholder={this.state.pass}
                  placeholderTextColor='rgba(255,255,255,0.9)'
                  secureTextEntry
                  returnKeyType='go'
                  ref={(input) => this.passwordInput = input}
                 />
- 
+                <TouchableOpacity  onPress={() => this.props.navigation.navigate('Feed')} style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>
+                        LOGIN
+                    </Text>
+                </TouchableOpacity> 
             </View>   
         );
     }

@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/Entypo';
 
 
 
-export default class Profile extends React.Component {
+export default class Bio extends React.Component {
     render() {
         return (
         <ScrollView>
@@ -31,7 +31,6 @@ export default class Profile extends React.Component {
 
 const styles = StyleSheet.create ({
     form: {
-       borderTopWidth: 4,
        flexDirection: 'row'
     },
     formWrap:{

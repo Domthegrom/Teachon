@@ -106,7 +106,7 @@ static navigationOptions = {
                     <Icon onPress={this._handleFacebookLogin} name="facebook-with-circle" size={65} color='#3B5998' />
                     </View>
                     <View style={{marginHorizontal: 28}}>     
-                    <Icon onPress={() => this.props.navigation.navigate('Profile')}  name="linkedin-with-circle" size={65} color='#0077B5' />
+                    <Icon name="linkedin-with-circle" size={65} color='#0077B5' />
                     </View> 
                     <View style={{marginHorizontal: 28}}>     
                     <Icon onPress={this._handleGoogleLogin}  name="google--with-circle" size={65} color='#DC4E41' />

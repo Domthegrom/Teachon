@@ -3,12 +3,18 @@ import { StyleSheet, TextInput, Dimensions, Platform, Text, View, StatusBar, Tou
 
 
 export default class LoginForm extends React.Component {
+    constructor() {
+        super();
+            this.state = {
+                email: 'Email'
+            }
+    }
     render() {
         return (
             <View style={styles.container}>
                 <TextInput
                  style={styles.input}
-                 placeholder='Email'
+                 placeholder={this.state.email}
                  placeholderTextColor='rgba(255,255,255,0.9)'
                  onSubmitEditing={() => this.passwordInput.focus()}
                  keyboardType="email-address"
